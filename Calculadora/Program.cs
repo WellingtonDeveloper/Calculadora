@@ -31,6 +31,9 @@ namespace Calculadora
 
             switch (opcao)
             {
+                case Menu.Soma:
+                    Soma();
+                    break;
                 case Menu.Sair:
                     escolheuSair = true;
                     break;
@@ -39,6 +42,18 @@ namespace Calculadora
                 //Console.ReadLine();
                 Console.Clear();
           
+        }
+
+        static void Soma()
+        {
+            Console.WriteLine("Soma de dois numeros:");
+            Console.WriteLine("Digite o primeiro numero: ");
+            int a = int.Parse(Console.ReadLine());
+            Console.WriteLine("Digite o segundo nemero: ");
+            int b = int.Parse(Console.ReadLine());
+            int resultado = a + b;
+            Console.WriteLine($"O resultado é: {resultado}");
+            Console.ReadLine();
         }
     }
 }
