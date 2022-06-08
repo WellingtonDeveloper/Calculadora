@@ -11,6 +11,13 @@ namespace Calculadora
         enum Menu { Soma = 1, Subtracao = 2, Divisão = 3, Multiplicacao = 4, Potencia = 5, Raiz = 6, Sair = 7 }
         static void Main(string[] args)
         {
+            bool escolheuSair = false;
+            while (!escolheuSair) // Enquanto o usuário NÃO (!) ESCOLHER SAIR EXIBA O MENU
+            {
+                //Exiba o menu
+            }
+            //Feche
+
             Console.WriteLine("Seja bem vindo ao Calc, Selecione uma das opções:");
             Console.Write("1 - Soma\n2 - Subtração\n3 - Divisão\n4 - Multiplicação\n5 - Potência\n6 - Raiz\n7 - Sair\n");
 
@@ -22,9 +29,16 @@ namespace Calculadora
 
             Menu opcao = (Menu)int.Parse(Console.ReadLine());
 
-                Console.WriteLine(opcao);
-
-                Console.ReadLine();
+            switch (opcao)
+            {
+                case Menu.Sair:
+                    escolheuSair = true;
+                    break;
+            }
+                //Console.WriteLine(opcao);
+                //Console.ReadLine();
+                Console.Clear();
+          
         }
     }
 }
