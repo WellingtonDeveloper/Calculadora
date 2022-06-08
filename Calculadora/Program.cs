@@ -40,8 +40,14 @@ namespace Calculadora
                     case Menu.Multiplicacao:
                         Multiplicacao();
                         break;
+                    case Menu.Potencia:
+                        Pot();
+                        break;
                     case Menu.Sair:
                         escolheuSair = true;
+                        break;
+                    case Menu.Raiz:
+                        Raiz();
                         break;
                 }
                 //Console.WriteLine(opcao);
@@ -103,6 +109,30 @@ namespace Calculadora
             Console.ReadLine();
         }
 
+        static void Pot()
+        {
+            //2^4 = 2*2*2*2 = 16
+            Console.WriteLine("Potência de um numero:");
+            Console.WriteLine("Digite a base: ");
+            int baseNum = int.Parse(Console.ReadLine());
+            Console.WriteLine("Digite o expoente: ");
+            int expo = int.Parse(Console.ReadLine());
+            int resultado = (int)Math.Pow(baseNum,expo);
+            Console.WriteLine($"O resultado é: {resultado}");
+            Console.WriteLine("Aperte ENTER para voltar para  o menu");
+            Console.ReadLine();
+        }
+
+        static void Raiz()
+        {
+            Console.WriteLine("Raiz de um numero:");
+            Console.WriteLine("Digite o numero: ");
+            int a = int.Parse(Console.ReadLine());
+            double resultado = Math.Sqrt(a);
+            Console.WriteLine($"O resultado é: {resultado}");
+            Console.WriteLine("Aperte ENTER para voltar para  o menu");
+            Console.ReadLine();
+        }
 
     }
 
