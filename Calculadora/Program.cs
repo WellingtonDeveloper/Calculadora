@@ -14,34 +14,32 @@ namespace Calculadora
             bool escolheuSair = false;
             while (!escolheuSair) // Enquanto o usuário NÃO (!) ESCOLHER SAIR EXIBA O MENU
             {
-                //Exiba o menu
-            }
-            //Feche
 
-            Console.WriteLine("Seja bem vindo ao Calc, Selecione uma das opções:");
-            Console.Write("1 - Soma\n2 - Subtração\n3 - Divisão\n4 - Multiplicação\n5 - Potência\n6 - Raiz\n7 - Sair\n");
+                Console.WriteLine("Seja bem vindo ao Calc, Selecione uma das opções:");
+                Console.Write("1 - Soma\n2 - Subtração\n3 - Divisão\n4 - Multiplicação\n5 - Potência\n6 - Raiz\n7 - Sair\n");
 
-            /*
-            String opcaoTXT = Console.ReadLine();
-            int opcaoInt = int.Parse(opcaoTXT);
-            Menu opcao = (Menu)opcaoInt;
-            */
+                /*
+                String opcaoTXT = Console.ReadLine();
+                int opcaoInt = int.Parse(opcaoTXT);
+                Menu opcao = (Menu)opcaoInt;
+                */
 
-            Menu opcao = (Menu)int.Parse(Console.ReadLine());
+                Menu opcao = (Menu)int.Parse(Console.ReadLine());
 
-            switch (opcao)
-            {
-                case Menu.Soma:
-                    Soma();
-                    break;
-                case Menu.Sair:
-                    escolheuSair = true;
-                    break;
-            }
+                switch (opcao)
+                {
+                    case Menu.Soma:
+                        Soma();
+                        break;
+                    case Menu.Sair:
+                        escolheuSair = true;
+                        break;
+                }
                 //Console.WriteLine(opcao);
                 //Console.ReadLine();
                 Console.Clear();
-          
+            }
+
         }
 
         static void Soma()
@@ -49,11 +47,15 @@ namespace Calculadora
             Console.WriteLine("Soma de dois numeros:");
             Console.WriteLine("Digite o primeiro numero: ");
             int a = int.Parse(Console.ReadLine());
-            Console.WriteLine("Digite o segundo nemero: ");
+            Console.WriteLine("Digite o segundo numero: ");
             int b = int.Parse(Console.ReadLine());
             int resultado = a + b;
             Console.WriteLine($"O resultado é: {resultado}");
+            Console.WriteLine("Aperte ENTER para voltar para  o menu");
             Console.ReadLine();
         }
+
+
     }
+
 }
